@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link rel="stylesheet" href="mycss.css">
+        
+  </head>
+
+  <body>
+    <h1>Todos Lists</h1>
+   <!--
+    <button id="displayTodosButton">Display Todos</button>
+    <button id="toggleAllButton">Toggle All</button>
+      <button onclick="handlers.displayTodos()">Display Todos</button>
+     -->
+     <div>
+   
+    <button onclick="handlers.toggleAll()">Toggle All</button>
+    </div>
+    
+    <div>
+      <button onclick="handlers.addTodo()">Add</button>
+      <input id="addTodoTextInput" type="text">
+    </div>
+    
+    <div>
+      <button onclick="handlers.changeTodo()">Change Todo</button>
+      <input id="changeTodoPositionInput" type="number">
+      <input id="changeTodoTextInput" type="text">
+    </div>
+
+	<div>
+      <button onclick="handlers.deleteTodo()">Delete</button>
+      <input id="deleteTodoPositionInput" type="number">
+    </div>
+    
+    <div>
+      <button onclick="handlers.toggleCompleted()">Toggle Completed</button>
+      <input id="toggleCompletedPositionInput" type="number"><br><br>
+      <input type="button" value="Set Alarm" onclick="openAlarmForm()">
+    </div>
+    
+    <ul>
+      
+    </ul>
+	
+	<div id="setalarm" style="display:none;">
+	<h2>Set Alarm</h2>
+	Type hour: <input type="number" id="sethour" min="0" max="24"><br>
+	Type minutes: <input type="number" id="setminute" min="00" max="59"><br>
+	<input type="button" value="Set Alarm" onclick="activateAlarm()">
+	</div>
+	
+ <script src="cordova.js"></script>
+    <script src="script.js"></script>
+  </body>
+
+</html>
